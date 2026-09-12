@@ -1,0 +1,11 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+calidad-biblioteca,com.biblioteca.model,Libro,59,22,10,0,23,10,14,4,9,4
+calidad-biblioteca,com.biblioteca.model,Prestamo,35,32,0,0,14,15,6,9,6,9
+calidad-biblioteca,com.biblioteca.model,Usuario,20,50,0,0,8,19,6,8,6,8
+calidad-biblioteca,com.biblioteca,BibliotecaApplication,5,3,0,0,2,1,1,1,1,1
+calidad-biblioteca,com.biblioteca.service,PrestamoService,125,337,17,51,32,83,10,32,0,8
+calidad-biblioteca,com.biblioteca.service,LibroService,37,50,11,5,7,12,8,6,1,5
+calidad-biblioteca,com.biblioteca.service,UsuarioService,0,64,2,8,0,15,2,8,0,5
+calidad-biblioteca,com.biblioteca.controller,LibroController,20,6,0,0,5,3,4,1,4,1
+calidad-biblioteca,com.biblioteca.controller,UsuarioController,20,6,0,0,5,3,4,1,4,1
+calidad-biblioteca,com.biblioteca.controller,PrestamoController,37,6,0,0,11,3,5,1,5,1

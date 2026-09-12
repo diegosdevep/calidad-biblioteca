@@ -1,0 +1,13 @@
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\BibliotecaApplication.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\controller\LibroController.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\controller\PrestamoController.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\controller\UsuarioController.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\model\Libro.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\model\Prestamo.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\model\Usuario.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\repository\LibroRepository.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\repository\PrestamoRepository.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\repository\UsuarioRepository.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\service\LibroService.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\service\PrestamoService.java
+D:\Documentos\GitHub\calidad-biblioteca2\src\main\java\com\biblioteca\service\UsuarioService.java
