@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 @Entity
 public class Libro {
 
+    private static final String MensajeNoPrestamo = "No se puede prestar";
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -71,19 +73,19 @@ public class Libro {
     public String prestar() {
 
         if (titulo == null) {
-            return "No se puede prestar";
+            return MensajeNoPrestamo;
         }
 
         if (titulo.isEmpty()) {
-            return "No se puede prestar";
+            return MensajeNoPrestamo;
         }
 
         if (autor == null) {
-            return "No se puede prestar";
+            return MensajeNoPrestamo;
         }
 
         if (autor.isEmpty()) {
-            return "No se puede prestar";
+            return MensajeNoPrestamo;
         }
 
         if (prestado) {
