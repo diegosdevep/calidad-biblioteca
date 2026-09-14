@@ -64,19 +64,8 @@ public class Libro {
 
     public String prestar() {
 
-        if (titulo == null) {
-            return MENSAJE_NO_PRESTAMO;
-        }
-
-        if (titulo.isEmpty()) {
-            return MENSAJE_NO_PRESTAMO;
-        }
-
-        if (autor == null) {
-            return MENSAJE_NO_PRESTAMO;
-        }
-
-        if (autor.isEmpty()) {
+        if (titulo == null || titulo.isEmpty()
+                || autor == null || autor.isEmpty()) {
             return MENSAJE_NO_PRESTAMO;
         }
 
