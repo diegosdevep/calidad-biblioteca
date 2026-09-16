@@ -7,6 +7,7 @@ import com.biblioteca.repository.LibroRepository;
 import com.biblioteca.repository.PrestamoRepository;
 import com.biblioteca.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
+import com.biblioteca.exception.BibliotecaException;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -38,27 +39,27 @@ public class PrestamoService {
                 libroRepository.findById(libroId).orElse(null);
 
         if (usuario == null) {
-            throw new RuntimeException("Usuario inexistente");
+            throw new BibliotecaException("Usuario inexistente");
         }
 
         if (libro == null) {
-            throw new RuntimeException("Libro inexistente");
+            throw new BibliotecaException("Libro inexistente");
         }
 
         if (!usuario.isActivo()) {
-            throw new RuntimeException("El usuario está inactivo");
+            throw new BibliotecaException("El usuario está inactivo");
         }
 
         if (usuario.isMoroso()) {
-            throw new RuntimeException("El usuario tiene una deuda");
+            throw new BibliotecaException("El usuario tiene una deuda");
         }
 
         if (libro.isPrestado()) {
-            throw new RuntimeException("El libro ya está prestado");
+            throw new BibliotecaException("El libro ya está prestado");
         }
 
         if (usuario.getPrestamos().size() >= 3) {
-            throw new RuntimeException(
+            throw new BibliotecaException(
                     "El usuario alcanzó el máximo de préstamos");
         }
 
@@ -163,11 +164,11 @@ public double calcularRecargoB(Prestamo prestamo) {
                 prestamoRepository.findById(prestamoId).orElse(null);
 
         if (prestamo == null) {
-            throw new RuntimeException("Préstamo inexistente");
+            throw new BibliotecaException("Préstamo inexistente");
         }
 
         if (prestamo.isDevuelto()) {
-            throw new RuntimeException("El préstamo ya fue devuelto");
+            throw new BibliotecaException("El préstamo ya fue devuelto");
         }
 
         prestamo.devolver();
@@ -187,11 +188,11 @@ public double calcularRecargoB(Prestamo prestamo) {
                 prestamoRepository.findById(prestamoId).orElse(null);
 
         if (prestamo == null) {
-            throw new RuntimeException("Préstamo inexistente");
+            throw new BibliotecaException("Préstamo inexistente");
         }
 
         if (prestamo.isDevuelto()) {
-            throw new RuntimeException("El préstamo ya fue devuelto");
+            throw new BibliotecaException("El préstamo ya fue devuelto");
         }
 
         prestamo.devolver();
