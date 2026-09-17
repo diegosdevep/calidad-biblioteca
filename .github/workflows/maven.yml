@@ -32,7 +32,9 @@ jobs:
           echo "jacoco.xml encontrado correctamente."
 
       - name: SonarQube Cloud analysis
-        if: ${{ secrets.SONAR_TOKEN != '' }}
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B sonar:sonar
+env:
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+run: |
+  if [ -n "$SONAR_TOKEN" ]; then
+    mvn -B sonar:sonar
+  fi
